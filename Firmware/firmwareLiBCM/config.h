@@ -32,8 +32,10 @@
         //#define STACK_IS_60S //47Ah Kits with QTY5 modules
 
     //choose which grid charger is installed
-        //#define GRIDCHARGER_IS_NOT_1500W //All 5AhG3 Kits & 'standard' 47Ah Kits
-        //#define GRIDCHARGER_IS_1500W     //47Ah Kits with 'fast' 6.5A charger
+        //#define GRIDCHARGER_5AhG3_ALL //All 5AhG3 Kits
+        //#define GRIDCHARGER_47Ah_LiBCM_2_1A //'standard' charger //~4% SoC/hour
+        //#define GRIDCHARGER_47Ah_LiBCM_6_5A //'upgraded' charger //~14% SoC/hour
+        //#define GRIDCHARGER_47Ah_VOLTGEN2_12A //3rd party Charger adapted by AfterEffect //~25% SoC/hour
 
     //choose ONE of the following
     //must match actual "current hack" hardware configuration:
@@ -119,6 +121,9 @@
     #define DISPLAY_POSITIVE_SIGN_DURING_ASSIST //current is positive when battery is discharging
     //#define DISPLAY_NEGATIVE_SIGN_DURING_ASSIST //current is negative when battery is discharging
 
+    //set default charging speed
+        #define DEFAULT_CHARGE_POWER 100 //default charging speed is 100% (full speed)
+
     //////////////////////////////////////////////////////////////////
 
     ////////////////////////
@@ -149,6 +154,10 @@
 	#define LIDISPLAY_SPLASH_PAGE_MS 3000 // How long the splash page shows on LiDisplay.  Default 3000 (3 seconds)
 	#define LIDISPLAY_GRID_CHARGE_PAGE_COOLDOWN_MS 4000 // Keep displaying the grid charging page this long before showing splash page when GC unplugged
 
+    //set default charging speed
+        //Set to any value between 1-100
+        #define DEFAULT_CHARGE_POWER 100
+    
     /*
     JTS2doLater:
         #define SERIAL_H_LINE_CONNECTED NO //H-Line wire manually connected to OEM BCM connector pin B01 (this connection is not OEM)
