@@ -29,9 +29,14 @@
         #define STACK_mAh_NOM 5000 //5 Ah nominal //nominal pack size (0:100% SoC)
     #elif defined BATTERY_TYPE_47Ah
         #define CELL_VREST_100_PERCENT_SoC 42000
-        #define CELL_VREST_085_PERCENT_SoC 39700
-        #define CELL_VREST_010_PERCENT_SoC 34000
-        #define STACK_mAh_NOM 47000
+        #define CELL_VREST_085_PERCENT_SoC 39700 //changed from 37900 to be same as 21AHPrius
+        #define CELL_VREST_010_PERCENT_SoC 34930 //changed from 34000 to be same as 21AHPrius
+        #define STACK_mAh_NOM 20400 //changed from 47000 to be same as 21AHPrius
+    #elif defined BATTERY_TYPE_21AHPrius
+        #define CELL_VREST_100_PERCENT_SoC 42000
+        #define CELL_VREST_085_PERCENT_SoC 40450
+        #define CELL_VREST_010_PERCENT_SoC 34930
+        #define STACK_mAh_NOM 20400		
     #else
         #error (Battery type not specified in config.h)
     #endif

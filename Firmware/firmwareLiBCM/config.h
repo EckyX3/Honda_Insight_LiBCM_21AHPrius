@@ -26,18 +26,19 @@
     //choose your battery type:
         //#define BATTERY_TYPE_5AhG3 //if you're not sure, you probably have this battery
         //#define BATTERY_TYPE_47Ah  //aka FoMoCo //aka Samsung SDI modules
+		#define BATTERY_TYPE_21AHPrius
 
     //choose how many cells are in series:
-        //#define STACK_IS_48S //All 5AhG3 Kits & 47Ah Kits with QTY4 modules
+        #define STACK_IS_48S //All 5AhG3 Kits & 47Ah Kits with QTY4 modules
         //#define STACK_IS_60S //47Ah Kits with QTY5 modules
 
     //choose which grid charger is installed
-        //#define GRIDCHARGER_IS_NOT_1500W //All 5AhG3 Kits & 'standard' 47Ah Kits
+        #define GRIDCHARGER_IS_NOT_1500W //All 5AhG3 Kits & 'standard' 47Ah Kits
         //#define GRIDCHARGER_IS_1500W     //47Ah Kits with 'fast' 6.5A charger
 
     //choose ONE of the following
     //must match actual "current hack" hardware configuration:
-        //#define SET_CURRENT_HACK_40 //actually +45.8% //most LiBCM users installed this hardware option
+        #define SET_CURRENT_HACK_40 //actually +45.8% //most LiBCM users installed this hardware option
         //#define SET_CURRENT_HACK_20 //actually +25.0%
         //#define SET_CURRENT_HACK_00 //OEM configuration (no current hack installed inside MCM)
 
@@ -95,7 +96,7 @@
 
     #define CELL_VMAX_REGEN                     43000 //43000 = 4.3000 volts
     #define CELL_VMIN_ASSIST                    31900
-    #define CELL_VMAX_GRIDCHARGER               39600 //MUST be less than 'CELL_VREST_085_PERCENT_SoC'
+    #define CELL_VMAX_GRIDCHARGER               40300 //MUST be less than 'CELL_VREST_085_PERCENT_SoC'
     #define CELL_VMIN_GRIDCHARGER               30000 //grid charger will not charge severely empty cells
     #define CELL_VMIN_KEYOFF                    CELL_VREST_010_PERCENT_SoC //when car is off, LiBCM turns off below this voltage
     #define CELL_BALANCE_MIN_SoC                65    //when car is off, cell balancing is disabled when battery is less than this percent charged

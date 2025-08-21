@@ -24,7 +24,12 @@
         #error (Select pack size - 48S or 60S - in config.h)
     #endif
 
-    #define FIRST_IC_ADDR  2 //lowest address.  All additional IC addresses must be sequential
+    #ifdef BATTERY_TYPE_21AHPrius
+       #define FIRST_IC_ADDR  3 //lowest address.  All additional IC addresses must be sequential
+    #else
+		#define FIRST_IC_ADDR  3 //lowest address.  All additional IC addresses must be sequential //changed from 2
+	#endif
+	
     #define CELLS_PER_IC  12 //Each LTC6804 measures QTY12 cells
 
     #define SPECIFIED_MAX_WAKEUP_TIME_LTCCORE_MICROSECONDS 300 //guarantees LTC6804 is in 'standby' mode (tWake = 300 us max)

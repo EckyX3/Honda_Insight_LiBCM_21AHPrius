@@ -41,6 +41,9 @@
   #elif defined BATTERY_TYPE_47Ah
     // what were 2 OEM temp sensors (PIN_TEMP_GRN, PIN_TEMP_YEL) are now on battery modules
     #define NUM_BATTERY_TEMP_SENSORS 5
+#elif defined BATTERY_TYPE_21AHPrius
+    // what were 2 OEM temp sensors (PIN_TEMP_GRN, PIN_TEMP_YEL) are now on battery modules
+    #define NUM_BATTERY_TEMP_SENSORS 5	
   #endif
 
     #define TEMP_POWERUP_DELAY_ms 100
